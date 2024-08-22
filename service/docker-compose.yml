@@ -11,6 +11,8 @@ services:
       - gitea-db-data:/var/lib/postgresql/data
     networks:
       - gitea-net
+    dns:
+      - 10.80.0.2
     
   gitea:
     restart: unless-stopped
